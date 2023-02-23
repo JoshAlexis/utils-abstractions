@@ -67,6 +67,14 @@ Adds information about the request to the metadata.
 function getRequestData(metadata: BaseMetadataFields): BaseMetadataFields
 ```
 
+#### showDebugQuery
+
+Add the query to the logs. Depends on the env `SHOW_QUERY` with the value *show*.
+
+```typescript
+function showDebugQuery(message: string, query: string): string
+```
+
 ---
 ### CORS
 
