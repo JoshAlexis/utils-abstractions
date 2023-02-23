@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES6",
+		"lib": ["ES2022", "DOM"],
+		"declaration": true,
+		"outDir": "./dist/cjs",
+		"moduleResolution": "node",
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+
+}
