@@ -1,6 +1,6 @@
 {
   "name": "utils-abstractions",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A collection of utilities and abstractions for logging, middlewares, etc.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -27,6 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/morgan": "^1.9.4",
+    "@types/passport-jwt": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "eslint": "^8.34.0",
@@ -44,6 +45,7 @@
     "helmet": "^6.0.1",
     "inversify": "^6.0.1",
     "morgan": "^1.10.0",
+    "passport-jwt": "^4.0.1",
     "reflect-metadata": "^0.1.13",
     "winston": "^3.8.2",
     "winston-loki": "^6.0.6"

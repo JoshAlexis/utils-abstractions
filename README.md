@@ -146,3 +146,21 @@ A custom implementation of `morgan` for http request. Requires a logger due the 
 ```typescript
 function morganCustomLogger(logger: BaseLogger): Handler<IncomingMessage, ServerResponse<IncomingMessage>>
 ```
+
+### Auth
+
+Imported from `utils-abstractions/auth`.
+
+#### JwtStrategyOptions
+
+Default configurations for `passport-jwt` with:
+
+- Extract token from Authorization Header
+- Issuer
+- Algorithms
+
+Requires the env `JWT_ACCESS_SECRET`, `JWT_ISSUER` and `JWT_ALGORITHM`.
+
+```typescript
+const JWT_STRATEGY_OPTIONS: StrategyOptions
+```
