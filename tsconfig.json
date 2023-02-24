@@ -2,11 +2,12 @@
     "compilerOptions": {
       "module": "ES6",
       "target": "ES6",
-      "lib": ["ES2022", "DOM"],
+      "lib": ["ES6", "ES7", "ESNext"],
       "declaration": true,
       "outDir": "./dist/esm",
       "moduleResolution": "node",
       "strict": true,
+      "esModuleInterop": true,
       "allowSyntheticDefaultImports": true,
       "forceConsistentCasingInFileNames": true,
       "emitDecoratorMetadata": true,
@@ -14,4 +15,5 @@
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules"]
+
 }
