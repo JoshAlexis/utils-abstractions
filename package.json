@@ -2,14 +2,14 @@
   "name": "utils-abstractions",
   "version": "1.0.0",
   "description": "A collection of utilities and abstractions for logging, middlewares, etc.",
-  "main": "dist/cjs/index.js",
+  "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoshAlexis/utils-abstractions.git"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc && tsc --build tsconfig.cjs.json"
+    "build": "rm -rf dist && tsc && tsc --build tsconfig.esm.json"
   },
   "files": [
     "dist",
