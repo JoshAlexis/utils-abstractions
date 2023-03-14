@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.1...v1.0.2) (2023-03-14)
+
+
+### Bug Fixes
+
+* **ci:** add command for build on workflow ([6ac668a](https://github.com/JoshAlexis/utils-abstractions/commit/6ac668a18e933eb159f4047b63e4d1d70fe3d74f))
+
 ## [1.0.1](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.0...v1.0.1) (2023-03-14)
 
 
