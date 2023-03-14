@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.2...v1.0.3) (2023-03-14)
+
+
+### Bug Fixes
+
+* **deps:** add @types/cors and params types ([3c17ab4](https://github.com/JoshAlexis/utils-abstractions/commit/3c17ab4b7c83954d07d2c522513f253d3e653231))
+
 ## [1.0.2](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.1...v1.0.2) (2023-03-14)
 
 
