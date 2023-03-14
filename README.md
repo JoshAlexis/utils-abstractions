@@ -8,7 +8,7 @@ A collection of utilities and abstractions for logging, middlewares, etc.
 
 #### BaseLogger
 
-Defines the logger's structure. Imported from `utils-abstractions/logger/abstractions`.
+Defines the logger's structure.
 
 ```typescript
 interface BaseLogger {
@@ -23,7 +23,6 @@ interface BaseLogger {
 #### BaseMetadataFields
 
 Defines the fields for the metadata of logging. All the new definitions *must* extend from this interface.
-Imported from `utils-abstractions/logger/abstractions`.
 
 ```typescript
 interface BaseMetadataFields extends Record<string, string | number | unknown> {
@@ -37,8 +36,6 @@ These fields are based in the concepts of Clean Architecture. For an initial app
 
 #### LoggerContainer
 
-Imported from `utils-abstractions/logger`
-
 Stores implementations of `BaseLogger`.
 
 Because you can have different logging mechanisms (console, files, stream, etc.) this container keeps all the
@@ -50,7 +47,7 @@ all the registered implementations you can use the log level method that you nee
 Also, it is configured to be used as dependency with [Inversify](https://inversify.io/).
 
 ```typescript
-class LoggerContainer implements BaseLogger
+class LoggerContainer implements BaseLogger {...}
 ```
 
 #### Logger Implementations
@@ -78,8 +75,6 @@ function showDebugQuery(message: string, query: string): string
 ---
 ### CORS
 
-Imported from `utils-abstractions/cors`.
-
 #### corsOptions
 
 Defines a configuration for allowed origins. The list of origins comes from then env `ALLOWED_ORIGINS` in a single
@@ -99,8 +94,6 @@ function credentialsHeader(req: Request, res: Response, next: NextFunction)
 
 ---
 ### Middlewares
-
-Imported from `utils-abstractions/middlewares`.
 
 #### errorHandler
 
@@ -148,8 +141,6 @@ function morganCustomLogger(logger: BaseLogger): Handler<IncomingMessage, Server
 ```
 
 ### Auth
-
-Imported from `utils-abstractions/auth`.
 
 #### JwtStrategyOptions
 

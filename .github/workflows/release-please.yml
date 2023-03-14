@@ -9,6 +9,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
@@ -17,10 +18,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           release-type: node
           package-name: utils-abstractions
-      # The logic below handles the npm publication:
       - uses: actions/checkout@v2
-        # these if statements ensure that a publication only occurs when
-        # a new release is created:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v1
         with:
@@ -29,7 +27,11 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - name: Build
+        run: npm build
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}

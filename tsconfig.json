@@ -1,19 +1,18 @@
 {
-    "compilerOptions": {
-      "module": "ES6",
-      "target": "ES6",
-      "lib": ["ES6", "ES7", "ESNext"],
-      "declaration": true,
-      "outDir": "./dist/esm",
-      "moduleResolution": "node",
-      "strict": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "forceConsistentCasingInFileNames": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
-
+  "compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES6",
+		"lib": ["ES6", "ES7", "ESNext"],
+		"declaration": true,
+		"outDir": "./dist",
+		"moduleResolution": "node",
+		"strict": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
