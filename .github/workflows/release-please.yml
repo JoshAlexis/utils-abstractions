@@ -28,7 +28,7 @@ jobs:
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - name: Build
-        run: npm build
+        run: npm run build
         if: ${{ steps.release.outputs.release_created }}
       - name: Publish
         run: npm publish
