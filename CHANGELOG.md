@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.0...v1.0.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* add step on workflow for build project ([25cf4da](https://github.com/JoshAlexis/utils-abstractions/commit/25cf4daacd27f95a0c9bb7d0a17d5753969a0452))
+
 ## 1.0.0 (2023-02-27)
 
 
