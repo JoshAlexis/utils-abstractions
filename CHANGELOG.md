@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.3...v1.0.4) (2023-03-24)
+
+
+### Bug Fixes
+
+* change jwt secret name ([0175d6a](https://github.com/JoshAlexis/utils-abstractions/commit/0175d6ace6fb87bab6fb5c3904077832439eb35e))
+* change jwt secret name ([#10](https://github.com/JoshAlexis/utils-abstractions/issues/10)) ([5ae5b1d](https://github.com/JoshAlexis/utils-abstractions/commit/5ae5b1d35eb6474e32fec9a862c5aee4e36fc88c))
+
 ## [1.0.3](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.2...v1.0.3) (2023-03-14)
 
 
