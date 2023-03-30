@@ -1,5 +1,5 @@
 /**
- * Ocurre cuando se está quiere obtener un logger que ya no está en la lista.
+ * Occurs when you want to get a logger that is no longer on the list.
  */
 export class LoggerNotExistsError extends Error {
 	status = 500

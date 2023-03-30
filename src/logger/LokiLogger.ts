@@ -20,6 +20,7 @@ function messageFormat(info: winston.Logform.TransformableInfo) {
  * Depends on `LOKI_SERVER`, `LOKI_INTERVAL` and `LOKI_APP_LABEL` env.
  *
  * You need to assign the `LOKI_APP_LABEL` env to be able to identify which service is generating the logs.
+ * In case that `LOKI_APP_LABEL` is not assigned the default value is *logger-container*.
  */
 export class LokiLogger implements BaseLogger {
 	protected readonly loki: winston.Logger

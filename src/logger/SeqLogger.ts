@@ -5,8 +5,8 @@ import { getBaseLevel } from './config/getBaseLevel'
 import { LOGGER_LEVELS } from './config/LoggerLevels'
 
 /**
- * Instancia de `Winston` con configuración de `transport` usando `Seq`.
- * Depende de las variables `SEQ_SERVER` y `SEQ_TOKEN`.
+ * Uses `Winston` with the transport configuration for `Datalust - Seq`.
+ * Depends on `SEQ_SERVER` and `SEQ_TOKEN`.
  */
 export class SeqLogger implements BaseLogger {
 	private seq: winston.Logger

@@ -1,36 +1,31 @@
 /**
- * Define la estructura base de un `Logger`.
+ * Base structure of a logger.
  */
 export interface BaseLogger {
 	/**
-	 * Mensaje de nivel INFO
-	 * @param message Mensaje a mostrar
-	 * @param meta Metadatos del mensaje
+	 * @param message
+	 * @param meta
 	 */
 	info(message: string, meta?: any): void
 	/**
-	 * Mensaje de nivel DEGUG
-	 * @param message Mensaje a mostrar
-	 * @param meta Metadatos del mensaje
+	 * @param message
+	 * @param meta
 	 */
 	debug(message: string, meta?: any): void
 	/**
-	 * Mensaje de nivel ERROR
-	 * @param message Mensaje a mostrar
-	 * @param meta Metadatos del mensaje
+	 * @param message
+	 * @param meta
 	 */
 	error(message: string, meta?: any): void
 	/**
-	 * Mensaje de nivel WARN
-	 * @param message Mensaje a mostrar
-	 * @param meta Metadatos del mensaje
+	 * @param message
+	 * @param meta
 	 */
 	warn(message: string, meta?: any): void
 
 	/**
-	 * Mensaje de nivel HTTP
-	 * @param message Mensaje a mostrar
-	 * @param meta Metadatos del mensaje
+	 * @param message
+	 * @param meta
 	 */
 	http(message: string, meta?: any): void
 }

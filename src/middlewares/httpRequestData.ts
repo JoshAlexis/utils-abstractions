@@ -4,7 +4,14 @@ import { RequestData } from './RequestData'
 import { BaseLogger } from '../logger/abstractions/BaseLogger'
 
 /**
- * Captura información de las peticiones y las almacena en memoria
+ * Fetch data from the request and keep it in memory. Works together a logger, and it takes the values of:
+ *
+ * - *body*
+ * - *params*
+ * - *query*
+ * - *headers*
+ * - *url*
+ * - *method*
  * @group Middlewares
  */
 export function httpRequestData(logger: BaseLogger) {

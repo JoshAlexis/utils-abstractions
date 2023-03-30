@@ -3,7 +3,8 @@ import { CorsOptions } from 'cors'
 export const allowedOrigins = process.env.CORS_ORIGINS?.split(',')
 
 /**
- * Define las opciones para CORS.
+ * Defines a configuration for allowed origins. The list of origins comes from then env `CORS_ORIGINS` in a single
+ * string separated by commas.
  */
 export const corsOptions: CorsOptions = {
 	// eslint-disable-next-line no-shadow
