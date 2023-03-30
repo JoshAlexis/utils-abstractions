@@ -1,7 +1,13 @@
 import { ExtractJwt, StrategyOptions } from 'passport-jwt'
 
 /**
- * Configuraciones para `Strategy` de `JWT`.
+ * Default configurations for `passport-jwt` with:
+ *
+ * - Extract token from Authorization Header (Bearer)
+ * - Issuer
+ * - Algorithms
+ *
+ * Requires the env `JWT_ACCESS_SECRET`, `JWT_ISSUER` and `JWT_ALGORITHM`
  */
 export const JWT_STRATEGY_OPTIONS: StrategyOptions = {
 	jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),

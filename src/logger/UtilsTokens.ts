@@ -1,5 +1,5 @@
 /**
- * Identificador para inyección de dependencias.
+ * Dependency identifier.
  */
 export const UTILS_TOKENS = {
 	Logger: Symbol('LoggerContainer')

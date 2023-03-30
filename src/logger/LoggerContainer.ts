@@ -4,43 +4,36 @@ import { LoggerAlreadyRegisteredError } from './errors/LoggerAlreadyRegisteredEr
 import { LoggerNotExistsError } from './errors/LoggerNoExists'
 
 /**
- * Almacena implementaciones de loggers.
+ * Stores implementations of `BaseLogger`.
  *
- * Debido a que se pueden tener diferentes mecanismos de logging (consola, archivos, etc.)
- * este contenedor almacena todas las implementaciones definidas y permite usar, ya sea todas o
- * solo una instancia de un tipo dependiendo del contexto.
+ * Because you can have different logging mechanisms (console, files, stream, etc.) this container keeps all the
+ * defined implementations and allows you, either all or one definition depending on the needed context.
  *
- * Las implementaciones se mapean con un nombre, lo que permite indicar que instancia a utilizar.
- * En el caso de que se quieran emplear todos los logger registrados se llama a algunos de los
- * métodos de nivel de log.
+ * Each implementation is mapped to a name, this allows you to select an instance to use. In the case we want to use
+ * all the registered implementations you can use the log level method that you need.
  *
- * También está configurador para ser inyectado como dependencia usando `inversify`.
+ * Also, it is configured to be used as dependency with [Inversify](https://inversify.io/).
  *
  * @example
  *
- * // Registrar nuevo logger, en caso de que ya exista arroja un error
+ * // Register a new logger, in case there already exists throws an error
  * loggerContainer.addLogger('winston-console', new WinstonLogger())
  *
- * // Obtener instancia, en caso de que no exista arroja un error
+ * // Get an instancia, in case there is no exists throws an error
  * const logger = loggerContainer.getLogger('winston-console')
  *
  * logger.debug('Hello ..')
  *
- * // Eliminar instancia, en caso de que no exista arroja un error
+ * // Delete an instance, in case there is no exists throws an error
  * loggerContainer.removeLogger('winston-console')
  *
- * // Usar todos los logger registrados
- *
+ * // Use all registered loggers
  * loggerContainer.info('Logging for all')
- *
- * // Eliminar una instancia
- * loggerContainer.remove('winston-console')
- *
  */
 @injectable()
 export class LoggerContainer implements BaseLogger {
 	/**
-	 * Las diferentes implementaciones.
+	 * List of register instances
 	 * @private
 	 */
 	private readonly loggers: Map<string, BaseLogger>
@@ -50,9 +43,9 @@ export class LoggerContainer implements BaseLogger {
 	}
 
 	/**
-	 * Añade un logger al registro.
-	 * @param name El nombre con el que se registrará
-	 * @param logger La instancia a registrar
+	 * Adds a new logger instance to the registry
+	 * @param name Name of the instance
+	 * @param logger Instance to register
 	 * @throws {@link Shared.LoggerAlreadyRegisteredError}
 	 */
 	addLogger(name: string, logger: BaseLogger): void {
@@ -61,8 +54,8 @@ export class LoggerContainer implements BaseLogger {
 	}
 
 	/**
-	 * Elimina un logger del registro
-	 * @param name Nombre de la instancia
+	 * Deletes and instance
+	 * @param name Name of the instance
 	 * @throws {@link Shared.LoggerNotExists}
 	 */
 	removeLogger(name: string): void {
@@ -72,7 +65,7 @@ export class LoggerContainer implements BaseLogger {
 	}
 
 	/**
-	 * Obtiene una instancia
+	 * Gets and instance
 	 * @param name Nombre de la instancia
 	 * @throws {@link Shared.LoggerNotExists}
 	 */
@@ -104,8 +97,9 @@ export class LoggerContainer implements BaseLogger {
 	}
 
 	/**
-	 * Itera sobre los loggers registrados y llama al método indicado.
-	 * @param level
+	 * iterates sobre los loggers registrados y llama al método indicado.
+	 * Iterates over the registered logger and calls the corresponding method.
+	 * @param level Log level
 	 * @param message
 	 * @param meta
 	 * @private

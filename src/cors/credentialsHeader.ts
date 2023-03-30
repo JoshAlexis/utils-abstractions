@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express'
 import { allowedOrigins } from './corsOptions'
 
 /**
- * Añade la cabecera de `Access-Control-Allow-Credentials`.
+ * Sets the header `Access-Control-Allow-Credentials` to the request based on the `CORS_ORIGINS`.
  */
 export function credentialsHeader(req: Request, res: Response, next: NextFunction) {
 	const { origin } = req.headers

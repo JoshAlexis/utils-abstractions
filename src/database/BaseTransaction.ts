@@ -1,24 +1,20 @@
 /**
- * Estructura de una transacción.
- *
- * Como está basada en el funcionamiento de `Sequelize` se puede
- * pensar como un adaptador de `Sequelize.Transaction`.
+ * Base transaction's structure. Is based on `Sequelize.Transaction` and
+ * can be considered as a wrapper.
  *
  * @example
  * ```typescript
- * // La transacción se debe de usar dentro de un bloque try/catch
+ * // Must be used inside a try/catch block
  * try {
- *	// Creamos una transacción
  * 	const t = await transaction.createTransaction()
- * 	// llamadas a base de datos/modelo/repositorio
+ * 	// Calling the database
  *
- * 	await transaction.commit() // Aplicamos la transacción
+ * 	await transaction.commit()
  * } catch (e) {
- * 	// En caso de error se aplica el rollback
  *   await transaction.rollback()
  * }
  * ```
- * @typeParam T - El tipo de la transaction del ORM
+ * @typeParam T - Transaction Type from ORM
  */
 export interface BaseTransaction {
 	createTransaction(): Promise<unknown>

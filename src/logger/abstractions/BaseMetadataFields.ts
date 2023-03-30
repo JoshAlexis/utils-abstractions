@@ -1,18 +1,25 @@
 /**
- * Define los campos base de metadatos para el `logging`. Todas las definiciones
- * extras deben de extender de esta interfaz.
+ * Define the base fields for logging's metadata. All the new definitions must
+ * extend this interface.
+ *
+ * The structure of the log messages is the next:
+ *
+ * @example
+ * ```shell
+ * [2023-03-30 12:16:16.0761 PM] [log-level] [domain.layer.context]: Database connected
+ * ```
  */
 export interface BaseMetadataFields extends Record<string, string | number | unknown> {
 	/**
-	 * El dominio (para mayor entendimiento se puede decir que es un submódulo) del elemento.
+	 * The domain of the element, for an initial understanding it can be said that it is a submodule.
 	 */
 	domain?: string
 	/**
-	 * La capa de arquitectura.
+	 * Architecture's layer
 	 */
 	layer?: 'Application' | 'Infrastructure' | 'Presentation' | 'None' | string
 	/**
-	 * El punto dentro de la función/clase/método.
+	 * The point inside a function/class/method
 	 */
 	context?: string
 }

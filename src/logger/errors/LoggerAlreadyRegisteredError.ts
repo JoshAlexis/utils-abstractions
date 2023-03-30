@@ -1,5 +1,5 @@
 /**
- * Ocurre cuando se está registrando un logger que ya existe.
+ * Occurs when a logger that already exists is being registered.
  */
 export class LoggerAlreadyRegisteredError extends Error {
 	status = 500

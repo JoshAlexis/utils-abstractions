@@ -1,6 +1,5 @@
 /**
- * Define los campos a obtener de las peticiones.
- *
+ * Define the fields to capture from the requests.
  */
 export interface RequestDataValues {
 	body: string
@@ -13,8 +12,7 @@ export interface RequestDataValues {
 }
 
 /**
- * Almacena la información de las peticiones.
- *
+ * Stores information of the requests.
  */
 export const RequestData: RequestDataValues = {
 	body: '',

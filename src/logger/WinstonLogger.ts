@@ -8,6 +8,9 @@ import { transportWithColors } from './config/transportWithColors'
 
 const { combine, timestamp, printf } = winston.format
 
+/**
+ * Uses `Winston` with the transport configuration for `Console`.
+ */
 export class WinstonLogger implements BaseLogger {
 	/**
 	 * Configuración de `logger` con `winston`.

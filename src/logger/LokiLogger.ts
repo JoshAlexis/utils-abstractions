@@ -16,18 +16,14 @@ function messageFormat(info: winston.Logform.TransformableInfo) {
 }
 
 /**
- * Instancia de `Winston` con configuración de `transport` para `Grafana Loki`.
- * Depende de las variables `LOKI_SERVER` y `LOKI_INTERVAL`.
+ * Uses `Winston` with the transport configuration for `Grafana Loki`.
+ * Depends on `LOKI_SERVER`, `LOKI_INTERVAL` and `LOKI_APP_LABEL` env.
  *
- * Es necesario asignar el label de `app` para poder identificar qué servicio genera los logs.
+ * You need to assign the `LOKI_APP_LABEL` env to be able to identify which service is generating the logs.
+ * In case that `LOKI_APP_LABEL` is not assigned the default value is *logger-container*.
  */
 export class LokiLogger implements BaseLogger {
 	protected readonly loki: winston.Logger
-
-	/**
-	 * Label para nombre de aplicación.
-	 */
-	app = 'logger-container'
 
 	constructor() {
 		this.loki = winston.createLogger({
@@ -35,11 +31,11 @@ export class LokiLogger implements BaseLogger {
 			levels: LOGGER_LEVELS,
 			transports: [
 				new LokiTransport({
-					host: process.env.LOKI_SERVER || 'http://localhost:3100',
-					interval: (process.env.LOKI_INTERVAL || 5) as number,
+					host: process.env?.LOKI_SERVER || 'http://localhost:3100',
+					interval: (process.env?.LOKI_INTERVAL || 5) as number,
 					json: true,
 					labels: {
-						app: this.app
+						app: process.env?.LOKI_APP_LABEL || 'logger-container'
 					},
 					format: combine(
 						timestamp({

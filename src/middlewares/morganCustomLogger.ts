@@ -2,8 +2,8 @@ import morgan from 'morgan'
 import { RequestData } from './RequestData'
 import { BaseLogger } from '../logger/abstractions'
 /**
- * Añade el `logger` personalizado a `Morgan`
- * @param logger El `logger`
+ * A custom implementation of `morgan` for http request.
+ * @param logger
  */
 export function morganCustomLogger(logger: BaseLogger) {
 	const stream: morgan.StreamOptions = {

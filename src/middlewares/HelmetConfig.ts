@@ -1,7 +1,8 @@
 import helmet from 'helmet'
 
 /**
- * Configuración default de `helmet` junto con:
+ * The *Helmet* middleware with custom options for:
+ *
  * - hidePoweredBy
  * - dnsPrefetchControl
  * - frameguard

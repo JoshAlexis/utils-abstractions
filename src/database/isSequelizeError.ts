@@ -1,14 +1,42 @@
-/**
- * Lista de errores de `Sequelize`. No todos los errores posibles.
- *
- */
-export const SequelizeError = ['DatabaseError', 'AggregateError', 'ValidationError', 'SequelizeDatabaseError']
+import { BaseError } from 'sequelize'
 
 /**
- * Verifica si un error proviene de `Sequelize`.
- * @param error El error a verificar
+ * List of `Sequelize` error names.
+ */
+export const SequelizeError = [
+	'DatabaseError',
+	'AggregateError',
+	'ValidationError',
+	'AssociationError',
+	'BulkRecordError',
+	'ConnectionError',
+	'EagerLoadingError',
+	'EmptyResultError',
+	'InstanceError',
+	'OptimisticLockError',
+	'QueryError',
+	'SequelizeScopeError',
+	// Connection
+	'ConnectionTimeOutError',
+	'AccessDeniedError',
+	'ConnectionAcquiredTimeoutError',
+	'ConnectionRefusedError',
+	'HostNotFoundError',
+	'HostNotReachableError',
+	'InvalidConnectionError',
+	// Database
+	'ExclusionConstraintError',
+	'TimeoutError',
+	'UnknownConstraintError',
+	'ForeignKeyConstraintError',
+	'UniqueConstraintError'
+]
+
+/**
+ * Verifies if an error is from `Sequelize`.
+ * @param error Error to verify
  *
  */
-export function isSequelizeError(error: unknown): boolean {
+export function isSequelizeError(error: unknown): error is BaseError {
 	return SequelizeError.includes((error as Error).name)
 }

@@ -32,6 +32,14 @@ interface BaseMetadataFields extends Record<string, string | number | unknown> {
 }
 ```
 
+#### Log message structure
+
+The structure of the log messages is the next:
+
+```shell
+[2023-03-30 12:16:16.0761 PM] [log-level] [domain.layer.context]: Database connected
+```
+
 These fields are based in the concepts of Clean Architecture. For an initial approach *domain* can be similar to a module or submodule.
 
 #### LoggerContainer
@@ -50,15 +58,43 @@ Also, it is configured to be used as dependency with [Inversify](https://inversi
 class LoggerContainer implements BaseLogger {...}
 ```
 
+#### Errors
+
+- `LoggerAlreadyRegisteredError`
+- `LoggerNotExists`
+
+#### Example
+```typescript
+// Register a new logger, in case there already exists throws an error
+loggerContainer.addLogger('winston-console', new WinstonLogger())
+
+// Get an instancia, in case there is no exists throws an error
+const logger = loggerContainer.getLogger('winston-console')
+
+logger.debug('Hello ..')
+
+// Delete an instance, in case there is no exists throws an error
+loggerContainer.removeLogger('winston-console')
+
+// Use all registered loggers
+loggerContainer.info('Logging for all')
+```
+
 #### Logger Implementations
 
 - *WinstonLogger*: Using [winston](https://www.npmjs.com/package/winston).
-- *SeqLogger*: Using [datalust/winston-seq](https://www.npmjs.com/package/@datalust/winston-seq).
-- *LokiLogger*: Using [winston-loki](https://www.npmjs.com/package/winston-loki).
+- *SeqLogger*: Using [datalust/winston-seq](https://www.npmjs.com/package/@datalust/winston-seq). 
+  - Depends on `SEQ_SERVER` and `SEQ_TOKEN`.
+- *LokiLogger*: Using [winston-loki](https://www.npmjs.com/package/winston-loki). 
+  - Depends on `LOKI_SERVER`, `LOKI_INTERVAL` and `LOKI_APP_LABEL` env.
+  - In case that `LOKI_APP_LABEL` is not assigned the default value is *logger-container*.
 
 #### getRequestData
 
-Adds information about the request to the metadata.
+Adds information about the request in the metadata. Sets the fields:
+
+- url
+- method
 
 ```typescript
 function getRequestData(metadata: BaseMetadataFields): BaseMetadataFields
@@ -77,16 +113,20 @@ function showDebugQuery(message: string, query: string): string
 
 #### corsOptions
 
-Defines a configuration for allowed origins. The list of origins comes from then env `ALLOWED_ORIGINS` in a single
-string separated by comma.
+Defines a configuration for allowed origins. The list of origins comes from then env `CORS_ORIGINS` in a single
+string separated by commas.
+
+#### Example
 
 ```typescript
 const corsOptions: CorsOptions
+
+// CORS_ORIGINS = https://dev.test.app,https://admin.test.app
 ```
 
 #### credentialsHeader
 
-Sets the header `Access-Control-Allow-Credentials` to the request with an allowed origin.
+Sets the header `Access-Control-Allow-Credentials` to the request based on the `CORS_ORIGINS`.
 
 ```typescript
 function credentialsHeader(req: Request, res: Response, next: NextFunction)
@@ -119,7 +159,7 @@ const HelmetConfig = helmet({ ... })
 
 #### httpRequestData
 
-Fetch data from the request and keep it in memory. Works together a logger and it takes the values of:
+Fetch data from the request and keep it in memory. Works together a logger, and it takes the values of:
 
 - *body*
 - *params*
@@ -134,7 +174,7 @@ function httpRequestData(logger: BaseLogger): (req: Request, res: Response, next
 
 ### morganCustomLogger
 
-A custom implementation of `morgan` for http request. Requires a logger due the default logger is the console.
+A custom implementation of `morgan` for http request.
 
 ```typescript
 function morganCustomLogger(logger: BaseLogger): Handler<IncomingMessage, ServerResponse<IncomingMessage>>
@@ -146,11 +186,11 @@ function morganCustomLogger(logger: BaseLogger): Handler<IncomingMessage, Server
 
 Default configurations for `passport-jwt` with:
 
-- Extract token from Authorization Header
+- Extract token from Authorization Header (Bearer)
 - Issuer
 - Algorithms
 
-Requires the env `JWT_ACCESS_SECRET`, `JWT_ISSUER` and `JWT_ALGORITHM`.
+Requires the env `JWT_ACCESS_SECRET`, `JWT_ISSUER` and `JWT_ALGORITHM`
 
 ```typescript
 const JWT_STRATEGY_OPTIONS: StrategyOptions
