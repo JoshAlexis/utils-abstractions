@@ -50,15 +50,37 @@ Also, it is configured to be used as dependency with [Inversify](https://inversi
 class LoggerContainer implements BaseLogger {...}
 ```
 
+#### Errors
+
+- `LoggerAlreadyRegisteredError`
+- `LoggerNotExists`
+
+#### Example
+```typescript
+// Register a new logger, in case there already exists throws an error
+loggerContainer.addLogger('winston-console', new WinstonLogger())
+
+// Get an instancia, in case there is no exists throws an error
+const logger = loggerContainer.getLogger('winston-console')
+
+logger.debug('Hello ..')
+
+// Delete an instance, in case there is no exists throws an error
+loggerContainer.removeLogger('winston-console')
+
+// Use all registered loggers
+loggerContainer.info('Logging for all')
+```
+
 #### Logger Implementations
 
 - *WinstonLogger*: Using [winston](https://www.npmjs.com/package/winston).
-- *SeqLogger*: Using [datalust/winston-seq](https://www.npmjs.com/package/@datalust/winston-seq).
-- *LokiLogger*: Using [winston-loki](https://www.npmjs.com/package/winston-loki).
+- *SeqLogger*: Using [datalust/winston-seq](https://www.npmjs.com/package/@datalust/winston-seq). Depends on `SEQ_SERVER` and `SEQ_TOKEN`.
+- *LokiLogger*: Using [winston-loki](https://www.npmjs.com/package/winston-loki). Depends on `LOKI_SERVER`, `LOKI_INTERVAL` and `LOKI_APP_LABEL` env.
 
 #### getRequestData
 
-Adds information about the request to the metadata.
+Add information about the request to the metadata.
 
 ```typescript
 function getRequestData(metadata: BaseMetadataFields): BaseMetadataFields
@@ -77,8 +99,10 @@ function showDebugQuery(message: string, query: string): string
 
 #### corsOptions
 
-Defines a configuration for allowed origins. The list of origins comes from then env `ALLOWED_ORIGINS` in a single
-string separated by comma.
+Defines a configuration for allowed origins. The list of origins comes from then env `CORS_ORIGINS` in a single
+string separated by commas.
+
+#### Example
 
 ```typescript
 const corsOptions: CorsOptions
