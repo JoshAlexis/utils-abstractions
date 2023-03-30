@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.4...v1.1.0) (2023-03-30)
+
+
+### Features
+
+* **logging:** add env `LOKI_APP_LABEL` for loki metadata ([07d5123](https://github.com/JoshAlexis/utils-abstractions/commit/07d51237f99be6560ee31e3252e2865894d99af2))
+* **logging:** convert `isSequelizeError` to type guard ([2db5f27](https://github.com/JoshAlexis/utils-abstractions/commit/2db5f2732b9e98375b1a501c0d68f1cee54f5710))
+
+
+### Bug Fixes
+
+* **docs:** include env for logging clases ([f7c0b8e](https://github.com/JoshAlexis/utils-abstractions/commit/f7c0b8e0a321024cb49ab48d2bc093b19900d986))
+
 ## [1.0.4](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.3...v1.0.4) (2023-03-24)
 
 
