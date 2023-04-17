@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/JoshAlexis/utils-abstractions/compare/v1.1.0...v1.1.1) (2023-04-17)
+
+
+### Bug Fixes
+
+* add optional chaining to access metadata ([eef668e](https://github.com/JoshAlexis/utils-abstractions/commit/eef668e7271df8a0b98e2d5dd2189da7ed6f76f5))
+* modify field override logic ([e46bb6b](https://github.com/JoshAlexis/utils-abstractions/commit/e46bb6b24c7e7f891d44c07d6001399e20cf3826))
+
 ## [1.1.0](https://github.com/JoshAlexis/utils-abstractions/compare/v1.0.4...v1.1.0) (2023-03-30)
 
 
