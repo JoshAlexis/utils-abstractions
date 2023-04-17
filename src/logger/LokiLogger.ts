@@ -7,7 +7,7 @@ import { LOGGER_LEVELS } from './config/LoggerLevels'
 const { printf, combine, timestamp } = winston.format
 
 function messageFormat(info: winston.Logform.TransformableInfo) {
-	if (info.labels.domain && info.labels.layer) {
+	if (info.labels?.domain && info.labels?.layer) {
 		return `[${info.timestamp}] [${info.level.toUpperCase()}] [${info.labels.domain}.${info.labels.layer}.${
 			info.labels.context
 		}]: ${info.message}`
