@@ -5,30 +5,27 @@
  */
 export function hideField(obj: unknown): unknown {
 	if (typeof obj === 'object' && obj !== null) {
-		let newObj = {}
+		let newObj = obj
 
-		Object.entries(obj).forEach((item) => {
+		Object.keys(obj).forEach((key) => {
 			// @ts-ignore
-			if (Object.hasOwn(obj, 'cookie') && obj?.cookie?.includes('jwt')) {
+			if (key.toLowerCase() === 'cookie' && obj?.cookie?.includes('jwt')) {
 				const hiddenValue = 'jwt=*****************'
 				newObj = {
-					...obj,
 					...newObj,
 					cookie: hiddenValue
 				}
 			}
-			if (Object.hasOwn(obj, 'authorization')) {
+			if (key.toLowerCase() === 'authorization') {
 				const hiddenValue = 'Bearer *****************'
 				newObj = {
-					...obj,
 					...newObj,
 					authorization: hiddenValue
 				}
 			}
-			if (Object.hasOwn(obj, 'password')) {
+			if (key.toLowerCase() === 'password') {
 				const hiddenValue = '*****************'
 				newObj = {
-					...obj,
 					...newObj,
 					password: hiddenValue
 				}
