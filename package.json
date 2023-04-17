@@ -9,7 +9,7 @@
     "url": "git+https://github.com/JoshAlexis/utils-abstractions.git"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc && tsc --build tsconfig.esm.json",
+    "build": "rm -rf dist && tsc --build tsconfig.build.json && tsc --build tsconfig.esm.json",
     "serve": "ts-node tests/server.ts"
   },
   "files": [
