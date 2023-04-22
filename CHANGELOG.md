@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/JoshAlexis/utils-abstractions/compare/v1.1.1...v1.2.0) (2023-04-22)
+
+
+### Features
+
+* allow values assign for metadata ([dcdf233](https://github.com/JoshAlexis/utils-abstractions/commit/dcdf23362d3a4d94b57930598bbd0a82c1f0df9c))
+
 ## [1.1.1](https://github.com/JoshAlexis/utils-abstractions/compare/v1.1.0...v1.1.1) (2023-04-17)
 
 
