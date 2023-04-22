@@ -21,7 +21,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["src", "__test__", "e2e"],
+        "paths": ["src", "tests"],
         "extensions": [".ts"]
       }
     }
