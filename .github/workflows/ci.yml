@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+    - 'main'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+        if: ${{ !contains(github.head_ref, 'release') }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+        if: ${{ !contains(github.head_ref, 'release') }}
+      - name: Installing deps
+        run: npm install --frozen-lockfile
+      - name: Run Test
+        run: npm test
+        if: ${{ !contains(github.head_ref, 'release') }}
