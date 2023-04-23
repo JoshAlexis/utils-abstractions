@@ -1,17 +1,17 @@
-import winston from "winston"
+import winston from 'winston'
 
 /**
- * Genera el formato de mensajes de logging. Genera 2 formatos:
- * - Con información de los metadatos
- * - Sin metadatados
- * @param info La información a mostrar
+ * Generates the message format for logging. Creates 2 formats:
+ * - With the metadata when the respective fields are with values
+ * - Without metadata
+ * @param info
  * @see {@link BaseMetadataFields}
  */
 export function messageFormat(info: winston.Logform.TransformableInfo) {
-  if (info.domain && info.layer) {
-    return `[${info.timestamp}] [${info.level.toUpperCase()}] [${info.domain}.${
-      info.layer
-    }.${info.context}]: ${info.message}`
-  }
-  return `[${info.timestamp}] [${info.level.toUpperCase()}] ${info.message}`
+	if (info?.domain && info?.layer) {
+		return `[${info.timestamp}] [${info.level.toUpperCase()}] [${info.domain}.${info.layer}.${info.context}]: ${
+			info.message
+		}`
+	}
+	return `[${info.timestamp}] [${info.level.toUpperCase()}] ${info.message}`
 }
