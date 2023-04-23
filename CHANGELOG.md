@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.0...v1.2.1) (2023-04-23)
+
+
+### Bug Fixes
+
+* **ci:** branch name ([2d19e3f](https://github.com/JoshAlexis/utils-abstractions/commit/2d19e3fbac71756a9e48f291fb465912bd322556))
+
 ## [1.2.0](https://github.com/JoshAlexis/utils-abstractions/compare/v1.1.1...v1.2.0) (2023-04-22)
 
 
