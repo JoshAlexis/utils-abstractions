@@ -2,8 +2,9 @@ name: CI
 
 on:
   pull_request:
-    - 'main'
-    - 'dependencies'
+    branches:
+      - 'main'
+      - 'dependencies'
 
 jobs:
   test:
