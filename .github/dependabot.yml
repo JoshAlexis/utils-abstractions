@@ -3,15 +3,15 @@ version: 2
 updates:
 	- package-ecosystem: "github-actions"
 	  directory: "/"
-	  target-branch: "dependencies"
+	  target-branch: dependencies
 	  schedule:
 		  interval: "weekly"
 	  labels:
-		 - "actions"
+		  - "actions"
 
 	- package-ecosystem: "npm"
 	  directory: "/"
-	  target-branch: "dependencies"
+	  target-branch: dependencies
 	  schedule:
 		  interval: "weekly"
 	  labels:
