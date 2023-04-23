@@ -1,0 +1,18 @@
+version: 2
+
+updates:
+	- package-ecosystem: "github-actions"
+	  directory: "/"
+	  target-branch: "dependencies"
+	  schedule:
+		  interval: "weekly"
+	  labels:
+		 - "actions"
+
+	- package-ecosystem: "npm"
+	  directory: "/"
+	  target-branch: "dependencies"
+	  schedule:
+		  interval: "weekly"
+	  labels:
+		  - "dependencies"

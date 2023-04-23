@@ -96,8 +96,11 @@ Adds information about the request in the metadata. Sets the fields:
 - url
 - method
 
+*reassign*: If true assigns the values in the object directly instead of create a copy.
+Default to false.
+
 ```typescript
-function getRequestData(metadata: BaseMetadataFields): BaseMetadataFields
+function getRequestData(metadata: BaseMetadataFields, reassign?: boolean): BaseMetadataFields
 ```
 
 #### showDebugQuery
