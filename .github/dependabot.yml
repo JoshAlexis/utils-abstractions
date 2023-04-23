@@ -9,7 +9,7 @@ updates:
     labels:
       - "actions"
   
-  - package-ecosystem: "dependencies"
+  - package-ecosystem: "npm"
     directory: "/"
     target-branch: dependencies
     schedule:
