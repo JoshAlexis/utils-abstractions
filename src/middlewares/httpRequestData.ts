@@ -32,7 +32,7 @@ export function httpRequestData(logger: BaseLogger) {
 		RequestData.url = req.url
 		RequestData.method = req.method
 
-		logger.http('Request {method} to {url}', metadata)
+		logger.http(`Request ${metadata.method} to ${metadata.url}`, metadata)
 		next()
 	}
 }
