@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.1...v1.2.2) (2023-05-22)
+
+
+### Bug Fixes
+
+* **middleware:** add string interpolation on message ([4fe2397](https://github.com/JoshAlexis/utils-abstractions/commit/4fe239740c905cd7efa3dbca1823c69c849cb9a6))
+
 ## [1.2.1](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.0...v1.2.1) (2023-04-23)
 
 
