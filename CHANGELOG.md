@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.2...v1.2.3) (2023-06-14)
+
+
+### Bug Fixes
+
+* **deps:** bump dottie from 2.0.3 to 2.0.4 ([200ff29](https://github.com/JoshAlexis/utils-abstractions/commit/200ff29871add89ca87dc111890fd35538275d6c))
+
 ## [1.2.2](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.1...v1.2.2) (2023-05-22)
 
 
