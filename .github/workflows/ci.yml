@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
         if: ${{ !contains(github.head_ref, 'release') }}
       - name: Installing deps
-        run: npm install --frozen-lockfile
+        run: npm ci
       - name: Run Test
         run: npm test
         if: ${{ !contains(github.head_ref, 'release') }}
