@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.3...v1.2.4) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** bump dependencies ([37a787f](https://github.com/JoshAlexis/utils-abstractions/commit/37a787f3df29bc2876c19ffc8cf1e7e9947d6f42))
+
 ## [1.2.3](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.2...v1.2.3) (2023-06-14)
 
 
