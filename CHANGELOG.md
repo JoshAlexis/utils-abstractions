@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.4...v1.2.5) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** bump protobufjs from 6.11.3 to 6.11.4 ([12d3f63](https://github.com/JoshAlexis/utils-abstractions/commit/12d3f638734988c2ed71afc9d08161b8b91db0a9))
+
 ## [1.2.4](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.3...v1.2.4) (2023-07-11)
 
 

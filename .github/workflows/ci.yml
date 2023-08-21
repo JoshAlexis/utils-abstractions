@@ -24,6 +24,7 @@ jobs:
         if: ${{ !contains(github.head_ref, 'release') }}
       - name: Installing deps
         run: npm ci
+        if: ${{ !contains(github.head_ref, 'release') }}
       - name: Run Test
         run: npm test
         if: ${{ !contains(github.head_ref, 'release') }}
