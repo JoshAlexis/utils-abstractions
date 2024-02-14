@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.8](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.7...v1.2.8) (2024-02-14)
+
+
+### Bug Fixes
+
+* **types:** change type of strategy options ([801bdff](https://github.com/JoshAlexis/utils-abstractions/commit/801bdffa7b3ed200a3e85a83a432c51bc9c61739))
+
 ## [1.2.7](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.6...v1.2.7) (2024-02-14)
 
 
