@@ -1,4 +1,4 @@
-import { ExtractJwt, StrategyOptions } from 'passport-jwt'
+import { ExtractJwt, StrategyOptionsWithoutRequest } from 'passport-jwt'
 import { Algorithm } from 'jsonwebtoken'
 
 /**
@@ -10,7 +10,7 @@ import { Algorithm } from 'jsonwebtoken'
  *
  * Requires the env `JWT_ACCESS_SECRET`, `JWT_ISSUER` and `JWT_ALGORITHM`
  */
-export const JWT_STRATEGY_OPTIONS: StrategyOptions = {
+export const JWT_STRATEGY_OPTIONS: StrategyOptionsWithoutRequest = {
 	jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
 	secretOrKey: process.env?.JWT_ACCESS_SECRET as string,
 	issuer: process.env?.JWT_ISSUER,
