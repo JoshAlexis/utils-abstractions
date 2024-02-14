@@ -28,3 +28,6 @@ jobs:
       - name: Run Test
         run: npm test
         if: ${{ !contains(github.head_ref, 'release') }}
+      - name: Test Build
+        run: npm run build
+        if: ${{ !contains(github.head_ref, 'release') }}
