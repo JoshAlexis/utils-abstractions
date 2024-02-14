@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.7](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.6...v1.2.7) (2024-02-14)
+
+
+### Bug Fixes
+
+* **types:** change type assertion for `algorithms` ([fc779b4](https://github.com/JoshAlexis/utils-abstractions/commit/fc779b40245a188373b411863c9cb2cea1821621))
+* **types:** change type assertion for `algorithms` ([#166](https://github.com/JoshAlexis/utils-abstractions/issues/166)) ([9029960](https://github.com/JoshAlexis/utils-abstractions/commit/9029960cbb81d6c22efa10e5d813d8f72c9f09c6))
+
 ## [1.2.6](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.5...v1.2.6) (2023-11-05)
 
 
