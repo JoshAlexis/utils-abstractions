@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.10](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.9...v1.2.10) (2024-04-22)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump express from 4.18.2 to 4.19.2 ([#178](https://github.com/JoshAlexis/utils-abstractions/issues/178)) ([6f572b2](https://github.com/JoshAlexis/utils-abstractions/commit/6f572b20fd0680d5f854c5be74d2a63b2bd5250c))
+
 ## [1.2.9](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.8...v1.2.9) (2024-04-22)
 
 
