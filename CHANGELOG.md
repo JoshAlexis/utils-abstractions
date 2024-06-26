@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.11](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.10...v1.2.11) (2024-06-26)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump braces from 3.0.2 to 3.0.3 ([#198](https://github.com/JoshAlexis/utils-abstractions/issues/198)) ([4a06aab](https://github.com/JoshAlexis/utils-abstractions/commit/4a06aab4067149ecb127417e18be7683a775e7df))
+
 ## [1.2.10](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.9...v1.2.10) (2024-04-22)
 
 
