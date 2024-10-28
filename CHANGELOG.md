@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.13](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.12...v1.2.13) (2024-10-28)
+
+
+### Bug Fixes
+
+* **deps:** bump serve-static and express ([d867c0e](https://github.com/JoshAlexis/utils-abstractions/commit/d867c0ecfb5c3385014f79724f54fa934ac2ce46))
+
 ## [1.2.12](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.11...v1.2.12) (2024-08-26)
 
 
