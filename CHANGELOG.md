@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.14](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.13...v1.2.14) (2024-10-28)
+
+
+### Bug Fixes
+
+* **deps:** bump cookie and express ([fa45d86](https://github.com/JoshAlexis/utils-abstractions/commit/fa45d869254e90bbc95dcf87e6a4aac188d826b8))
+
 ## [1.2.13](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.12...v1.2.13) (2024-10-28)
 
 
