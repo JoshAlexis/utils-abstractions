@@ -8,7 +8,7 @@ updates:
       interval: "weekly"
     labels:
       - "actions"
-  
+
   - package-ecosystem: "npm"
     directory: "/"
     target-branch: dependencies
@@ -16,6 +16,9 @@ updates:
       interval: "weekly"
     labels:
       - "dependencies"
+    ignore:
+      - dependency-name: "eslint"
+        update-types: [ "version-update:semver-major" ]
     groups:
       dev-dependencies:
         dependency-type: "development"
