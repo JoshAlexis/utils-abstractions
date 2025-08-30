@@ -19,14 +19,12 @@ export function httpRequestData(logger: BaseLogger) {
 		const metadata = {
 			method: req.method,
 			url: req.url,
-			body: hideField(req.body),
 			params: req.params,
 			query: req.query,
-			headers: hideField(req.headers)
+			headers: hideField(req.headers as Record<string, string>)
 		}
 
-		RequestData.body = JSON.stringify(hideField(req.body))
-		RequestData.headers = JSON.stringify(hideField(req.headers))
+		RequestData.headers = JSON.stringify(hideField(req.headers as Record<string, string>))
 		RequestData.params = JSON.stringify(req.params)
 		RequestData.query = JSON.stringify(req.query)
 		RequestData.url = req.url
