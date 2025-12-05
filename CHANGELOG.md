@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.15](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.14...v1.2.15) (2025-12-05)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump js-yaml from 3.14.1 to 3.14.2 ([33e7d10](https://github.com/JoshAlexis/utils-abstractions/commit/33e7d10d265dc11b6e08504739363695c9b084cf))
+* **deps:** bump jws from 3.2.2 to 3.2.3 ([48ade72](https://github.com/JoshAlexis/utils-abstractions/commit/48ade72e0ea941bdb59595c3d6ff607a808cdadf))
+* **deps:** bump on-headers and morgan ([3fba6b5](https://github.com/JoshAlexis/utils-abstractions/commit/3fba6b517d77a0edca707188f6eec5127634722d))
+* **deps:** bump validator from 13.9.0 to 13.15.23 ([ef645b0](https://github.com/JoshAlexis/utils-abstractions/commit/ef645b08abcaaa5bf2a2c76747b162eccf04702f))
+
 ## [1.2.14](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.13...v1.2.14) (2024-10-28)
 
 
