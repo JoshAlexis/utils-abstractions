@@ -12,17 +12,16 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v4
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           token: ${{ secrets.GH_TOKEN }}
           release-type: node
-          package-name: utils-abstractions
       - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
       - run: npm ci
