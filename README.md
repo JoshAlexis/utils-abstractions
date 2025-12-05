@@ -83,8 +83,6 @@ loggerContainer.info('Logging for all')
 #### Logger Implementations
 
 - *WinstonLogger*: Using [winston](https://www.npmjs.com/package/winston).
-- *SeqLogger*: Using [datalust/winston-seq](https://www.npmjs.com/package/@datalust/winston-seq). 
-  - Depends on `SEQ_SERVER` and `SEQ_TOKEN`.
 - *LokiLogger*: Using [winston-loki](https://www.npmjs.com/package/winston-loki). 
   - Depends on `LOKI_SERVER`, `LOKI_INTERVAL` and `LOKI_APP_LABEL` env.
   - In case that `LOKI_APP_LABEL` is not assigned the default value is *logger-container*.
@@ -164,7 +162,6 @@ const HelmetConfig = helmet({ ... })
 
 Fetch data from the request and keep it in memory. Works together a logger, and it takes the values of:
 
-- *body*
 - *params*
 - *query*
 - *headers*
@@ -174,6 +171,10 @@ Fetch data from the request and keep it in memory. Works together a logger, and 
 ```typescript
 function httpRequestData(logger: BaseLogger): (req: Request, res: Response, next: NextFunction) => void
 ```
+
+You can specify headers and cookies which content will be hidden using the `FIELDS_TO_REMOVE` and `COOKIES_TO_REMOVE`.
+**The values must be separated by commas**. By default, will hide the `authorization` header and 
+`jwt` cookie. The latter to avoid forcing the assignment of cookies to be hidden.
 
 ### morganCustomLogger
 
