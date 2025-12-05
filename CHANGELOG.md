@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.16...v2.0.0) (2025-12-05)
+
+### ⚠ BREAKING CHANGES
+
+* remover support for `seq` logging
+* refactor `hideField` to use environment-configured fields and cookies masking logic
+
+### Features
+
+* update messageFormat to use the new `MessageFormat` type ([6b594be](https://github.com/JoshAlexis/utils-abstractions/pull/265/commits/6b594be3370ca0eb1fac8d6255fd8bbbb604a0c6))
+* delete `SeqLogger` ([b02fa3d](https://github.com/JoshAlexis/utils-abstractions/pull/265/commits/b02fa3d75434595eefeed184b2644c66418f021f))
+* **security**: improve `hideField` middleware with dynamic field masking and cookie parsing ([873563b](https://github.com/JoshAlexis/utils-abstractions/pull/265/commits/873563b45acc8096fade1f3a57e10dd910dd4780))
+
+
 ## [1.2.16](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.15...v1.2.16) (2025-12-05)
 
 
