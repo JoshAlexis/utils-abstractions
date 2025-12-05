@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.16](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.15...v1.2.16) (2025-12-05)
+
+
+### Bug Fixes
+
+* **ci:** update release-please workflow to use Node.js 22 and new action URL ([4aaf2e0](https://github.com/JoshAlexis/utils-abstractions/commit/4aaf2e001271b9fce615a31d1a43d67dc096b01c))
+
 ## [1.2.15](https://github.com/JoshAlexis/utils-abstractions/compare/v1.2.14...v1.2.15) (2025-12-05)
 
 
