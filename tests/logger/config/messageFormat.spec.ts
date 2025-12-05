@@ -1,9 +1,9 @@
-import winston from 'winston'
-import { mockClear, mockDeep } from 'jest-mock-extended'
+import { mockDeep } from 'jest-mock-extended'
 import { messageFormat } from '../../../src/logger/config/messageFormat'
+import { MessageFormat } from '../../../src/logger/MessageFormat'
 
 describe('messageFormat', () => {
-	const logInfo = mockDeep<winston.Logform.TransformableInfo>()
+	const logInfo = mockDeep<MessageFormat>()
 	it('Should generate message with metadata', () => {
 		logInfo.level = 'DEBUG'
 		logInfo.message = 'calling async handler'

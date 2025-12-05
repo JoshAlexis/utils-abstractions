@@ -3,10 +3,11 @@ import LokiTransport from 'winston-loki'
 import { BaseLogger } from './abstractions/BaseLogger'
 import { getBaseLevel } from './config/getBaseLevel'
 import { LOGGER_LEVELS } from './config/LoggerLevels'
+import { MessageFormat } from './MessageFormat'
 
 const { printf, combine, timestamp } = winston.format
 
-function messageFormat(info: winston.Logform.TransformableInfo) {
+function messageFormat(info: MessageFormat) {
 	if (info.labels?.domain && info.labels?.layer) {
 		return `[${info.timestamp}] [${info.level.toUpperCase()}] [${info.labels.domain}.${info.labels.layer}.${
 			info.labels.context
